@@ -56,24 +56,30 @@ export class AppComponent {
   }
 
   selectWinner() {
-    let randomPlayer = this.comPlayer.label;
-    let userPlay = this.player.label;
+    let comPlayer$ = this.comPlayer.label;
+    let userPlay$ = this.player.label;
     if (
-      (userPlay === 'paper' && randomPlayer === 'rock') ||
-      (userPlay === 'scissor' && randomPlayer === 'paper') ||
-      (userPlay === 'rock' && randomPlayer === 'scissor')
+      (userPlay$ === 'paper' && comPlayer$ === 'rock') ||
+      (userPlay$ === 'scissor' && comPlayer$ === 'paper') ||
+      (userPlay$ === 'rock' && comPlayer$ === 'scissor')
     ) {
-      this.playerScore += 1;
-      this.winner = 'You win';
+      setTimeout(() => {
+        this.playerScore += 1;
+        this.winner = 'You win';
+      }, 250);
     } else if (
-      (userPlay === 'paper' && randomPlayer === 'paper') ||
-      (userPlay === 'rock' && randomPlayer === 'rock') ||
-      (userPlay === 'scissor' && randomPlayer === 'scissor')
+      (userPlay$ === 'paper' && comPlayer$ === 'paper') ||
+      (userPlay$ === 'rock' && comPlayer$ === 'rock') ||
+      (userPlay$ === 'scissor' && comPlayer$ === 'scissor')
     ) {
-      this.winner = 'We draw';
+      setTimeout(() => {
+        this.winner = 'We draw';
+      }, 250);
     } else {
-      this.comScore += 1;
-      this.winner = 'You lose';
+      setTimeout(() => {
+        this.comScore += 1;
+        this.winner = 'You lose';
+      }, 250);
     }
   }
 }
