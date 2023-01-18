@@ -31,7 +31,7 @@ export class AppComponent {
       icon: 'fas fa-scissors',
     },
   ];
-  playerTwo = this.gameQuiz[0];
+  comPlayer = this.gameQuiz[0];
 
   randomPlayer() {
     if (!this.player.label) {
@@ -40,7 +40,7 @@ export class AppComponent {
     let counter = 0;
     let startGame = setInterval(() => {
       counter++;
-      this.playerTwo =
+      this.comPlayer =
         this.gameQuiz[Math.floor(Math.random() * this.gameQuiz.length)];
       this.winner = '';
       if (counter > 5) {
@@ -56,7 +56,7 @@ export class AppComponent {
   }
 
   selectWinner() {
-    let randomPlayer = this.playerTwo.label;
+    let randomPlayer = this.comPlayer.label;
     let userPlay = this.player.label;
     if (
       (userPlay === 'paper' && randomPlayer === 'rock') ||
