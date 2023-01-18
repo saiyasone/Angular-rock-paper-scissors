@@ -33,6 +33,8 @@ export class AppComponent {
     },
   ];
   comPlayer = this.gameQuiz[0];
+  
+  constructor() {}
 
   randomPlayer() {
     if (!this.player.label) {
