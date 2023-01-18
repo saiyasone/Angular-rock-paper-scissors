@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="board-players">
+    <div class="board-list">
+      <div class="board-header">
+        <h4>Player : {{ playerScore | number }}</h4>
+      </div>
+      <div class="board-body">
+        <div class="board-icon">
+          <span [classList]="player.icon"></span>
+        </div>
+      </div>
+    </div>
+
+    <ng-container *ngIf="winner">
+      <h2>{{ winner }}</h2>
+    </ng-container>
+
+    <div class="board-list">
+      <div class="board-header">
+        <h4>Com : {{ comScore | number }}</h4>
+      </div>
+      <div class="board-body">
+        <div class="board-icon">
+          <span [classList]="playerTwo.icon"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-play">
+    <ng-container *ngFor="let game of gameQuiz">
+      <div (click)="selectAnswer(game)" class="play-list">
+        <div class="list">
+          <i [classList]="game.icon"></i>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="play">
+    <button
+      [disabled]="player.label ? false : true"
+      (click)="randomPlayer()"
+      class="btn-play"
+    >
+      Play Game
+    </button>
+  </div>
+</div>

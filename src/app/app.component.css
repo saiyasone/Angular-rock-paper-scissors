@@ -1,0 +1,85 @@
+.board-game {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.game-play {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.game-play .play-list {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #0c67f0;
+  font-size: 25px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+}
+.game-play .play-list:hover {
+  background-color: #f3f5f6;
+}
+.game-play .play-list .list {
+  display: flex;
+  align-items: center;
+}
+
+.play {
+  text-align: center;
+}
+.play button {
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  padding: 6px 14px;
+  height: 40px;
+  background-color: #0c67f0;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.play button:disabled {
+  background-color: #448cf7;
+  cursor: not-allowed;
+}
+
+.board-players {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.board-list {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+.board-header {
+  background-color: #0c67f0;
+  color: #fff;
+  text-align: center;
+  padding: 7px;
+}
+.board-header h4 {
+  font-size: 1rem;
+}
+.board-body {
+  position: relative;
+  text-align: center;
+  padding: 12px;
+}
+.board-body .board-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.board-icon > span {
+  font-size: 50px;
+}
