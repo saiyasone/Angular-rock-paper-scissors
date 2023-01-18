@@ -53,6 +53,14 @@
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 569px) {
+  .board-players {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
 .board-list {
   background-color: #fff;
   border: 1px solid #ddd;
