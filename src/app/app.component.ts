@@ -70,11 +70,7 @@ export class AppComponent {
         this.playerScore += 1;
         this.winner = 'You win';
       }, 250);
-    } else if (
-      (userPlay$ === 'paper' && comPlayer$ === 'paper') ||
-      (userPlay$ === 'rock' && comPlayer$ === 'rock') ||
-      (userPlay$ === 'scissor' && comPlayer$ === 'scissor')
-    ) {
+    } else if (userPlay$.includes(comPlayer$)) {
       setTimeout(() => {
         this.winner = 'We draw';
       }, 250);
