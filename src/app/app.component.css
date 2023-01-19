@@ -43,8 +43,11 @@
   font-size: 16px;
   border-radius: 5px;
 }
+.play button:hover {
+  background-color: #2678f3;
+}
 .play button:disabled {
-  background-color: #448cf7;
+  background-color: #5695f5;
   cursor: not-allowed;
 }
 
